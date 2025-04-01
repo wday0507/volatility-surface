@@ -4,6 +4,15 @@
 This project constructs a smooth volatility surface for options data from Yahoo Finance. K-Nearest Neighbours is used to detect outlier IV's, and a Radial Basis Function is used for 3D interpolation of the surface.
 
 
+## Introduction
+
+What is a vol surface?
+
+Why is it useful?
+
+Why do we want a smooth IV surface?
+
+
 ## Process
 
 **1/ Data Collection** - collect options data from YF
@@ -23,4 +32,18 @@ This project constructs a smooth volatility surface for options data from Yahoo 
 
 
 
-## Strengths & Limitations
+## Strengths 
+
+**1/ Smooth Surface** - The interpolation provides an accurate representation of market behavior, whilst avoiding overfitting to noisy data.
+
+** 2/ Clear and Intuitive Visualization** - allows users to intuitively explore and gain insights into the IV of options, distinguishing between normal data points and outliers.
+
+## Limitations
+
+**1/ No direct querying of implied vol** - users cannot input parameters and obtain an interpolated IV as if an option existed at that point. Enhancing the model to allow such queries would improve its usability.
+
+**2/ Quality of fit** - at the short end, the model struggles to distinguish between outliers and a steep IV smirk. The interpolated surface thus ignores these points and the resulting surface is flatter in the short end. 
+
+**3/ Simplistic Approach** -
+
+
