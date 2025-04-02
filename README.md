@@ -10,7 +10,11 @@ What is a vol surface?
 
 Why is it useful?
 
+Why is the surface not flat?
+
 Why do we want a smooth IV surface?
+
+Why use a Radial Basis Function?
 
 
 ## Process
@@ -36,7 +40,7 @@ Why do we want a smooth IV surface?
 
 **1/ Smooth Surface** - The interpolation provides an accurate representation of market behavior, whilst avoiding overfitting to noisy data.
 
-** 2/ Clear and Intuitive Visualization** - allows users to intuitively explore and gain insights into the IV of options, distinguishing between normal data points and outliers.
+**2/ Clear and Intuitive Visualization** - allows users to intuitively explore and gain insights into the IV of options, distinguishing between normal data points and outliers.
 
 ## Limitations
 
