@@ -59,6 +59,33 @@ What is a RBF and why use it?
 
 
 
+
+## Outputs
+
+
+Calls
+
+![image](https://github.com/user-attachments/assets/c41099c4-1b32-4437-b58f-1c38e913dfd5)
+
+
+Puts
+
+![image](https://github.com/user-attachments/assets/830b3c0f-002a-44c8-8fcd-4715c1dd4d80)
+
+
+
+The 3D surface has:
+- moneyness on the x-axis -> with higher (lower) values being ITM for calls (puts)
+- time to maturity on the y axis
+- IV on the z axis -> the lighter the shading means higher IV
+- The 'outliers', which were exlcuded from interpolation, are red
+
+Discussion of results
+- The model caputres the general shape of the IV points whilst being smooth.
+- The fit is very good across strikes for maturities > c10 days
+- However the model is not robust enought to capture the steepness of the surface slice for very low maturities. This is mostly due to the outlier detection algorithm (which excludes points that are particuarlly far from neighrbours) as well as the RBF smoothing cosntraints.
+
+
 ## Strengths 
 
 **1/ Smooth Surface** - The interpolation provides an accurate representation of market behavior, whilst avoiding overfitting to noisy data.
@@ -71,6 +98,11 @@ What is a RBF and why use it?
 
 **2/ Quality of fit** - at the short end, the model struggles to distinguish between outliers and a steep IV smirk. The interpolated surface thus ignores these points and the resulting surface is flatter in the short end. 
 
-**3/ Simplistic Approach** -
+**3/ Simplistic Approach** - ??
+
+**4/ Arbitrage?? - butterfly . calendar ?????
 
 
+
+## Improvements
+- how could we improve this modelling approach?
