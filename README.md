@@ -6,11 +6,11 @@ This project constructs a smooth volatility surface for options data from Yahoo 
 
 ## Introduction
 
-What is implied vol?
+What is implied volatility (IV)?
 The market's estimate of an asset's future volatility, derived from the price of an option using a model like Black Scholes.
 
-What is a vol surface?
-A 3D plot that shows how implied volatility varies with both strike price and time to maturity of options on the same underlying asset. 
+What is a volatility surface?
+A 3D plot that shows how IV varies with both strike price and time to maturity of options on the same underlying asset. 
 
 Why is it useful?
 The vol surface allows users to:
@@ -18,7 +18,7 @@ The vol surface allows users to:
 - risk management - helps in portfolio hedging and VaR calculations.
 - relative value trading - traders can compare IV across strikes/maturities to identify mispricings 
 
-Why is the surface not flat?
+Why is the vol surface not flat?
 - skew - demand for downside protection increases IV for lower strikes (skew), while fatter tails can cause a smile
 - term structure - short term events can spike IV for shorter term options
 
@@ -94,15 +94,16 @@ Discussion of results
 
 ## Limitations
 
-**1/ No direct querying of implied vol** - users cannot input parameters and obtain an interpolated IV as if an option existed at that point. Enhancing the model to allow such queries would improve its usability.
+**1/ No direct querying of IV** - users cannot input parameters and obtain an interpolated IV as if an option existed at that point. Enhancing the model to allow such queries would improve its usability.
 
 **2/ Quality of fit** - at the short end, the model struggles to distinguish between outliers and a steep IV smirk. The interpolated surface thus ignores these points and the resulting surface is flatter in the short end. 
 
-**3/ Simplistic Approach** - ??
-
-**4/ Arbitrage?? - butterfly . calendar ?????
 
 
 
 ## Improvements
-- how could we improve this modelling approach?
+1/ Enable direct querying of IV - so exotics could be price using these values of volatility
+
+2/ Consider more sophisticated model type to capture the sharp curvature in the short end of the surface
+
+3/ Validation testing - for arbitrage
