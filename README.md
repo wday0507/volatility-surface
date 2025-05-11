@@ -16,7 +16,7 @@ Why is it useful?
 The vol surface allows users to:
 - price exotic options - calibrating a pricing model with IV's means exotic prices are consistent with market prices
 - risk management - helps in portfolio hedging and VaR calculations.
-- relative value trading - traders can compare IV across strikes/maturities to identify mispricings 
+- relative value trading - traders can compare IV across strikes/maturities to identify mispricings.
 
 Why is the vol surface not flat?
 - skew - demand for downside protection increases IV for lower strikes (skew), while fatter tails can cause a smile
